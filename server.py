@@ -7,7 +7,7 @@ playback_position = 0 #A posição atual do playback da track (em segundos)
 is_playing = False #Se a música está tocando ou pausada
 clients = set() #Um conjunto para armazenar os clientes conectados
 
-async def handle_client(websocket, path): #Método chamado toda vez que um novo cliente se conecta ao server
+async def handle_client(websocket): #Método chamado toda vez que um novo cliente se conecta ao server
     #Adiciona o novo cliente ao conjunto de clientes conectados
     clients.add(websocket)
     try:
@@ -44,14 +44,3 @@ async def main():
 
 #Executa o server
 asyncio.run(main())
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
